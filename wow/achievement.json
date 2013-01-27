@@ -1,0 +1,110 @@
+{
+    "id": "http://us.battle.net/api/wow/achievement",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Achievement",
+    "type": "object",
+    "required": ["accountWide", "criteria", "description", "icon", "id", "points", "reward", "rewardItems","title"],
+    "properties": {
+        "accountWide":{
+        	"description": "An account wide achivement",
+        	"type": "boolean"
+        },
+        "criteria":{
+        	"type": "array",
+        },
+        "description":{
+        	"description": "Description of achivement",
+        	"type": "string",
+        },
+        "icon":{
+            "description": "Icon for achievement",
+            "type": "string",	
+        },
+        "id":{
+        	"description": "Unique ID for achievement",
+        	"type": "integer",
+        },
+        "points":{
+        	"description": "Number of points the achievement is worth",
+        	"type": "integer",
+        },
+        "reward":{
+        	"description": "Description of awards",
+        	"type": "string",        	
+        },
+        "rewardItems":{
+        	"description": "Array of the items rewarded",
+        	"type": "array",
+        	"items": {
+        		"type": "object",
+        		"properties": {
+        		    "icon":{
+        		    	"description": "Icon for item",
+        		    	"type": "string",
+        		    },
+        		    "id":{
+        		    	"description": "Id for item",
+        		    	"type": "integer",
+        		    },
+        		    "name":{
+        		    	"description": "Full name of item",
+        		    	"type": "string",
+        		    },
+        		    "quality":{
+        		    	"description": "Quality of the item",
+        		    	"enum": [0,1,2,3,4,5,6],
+        		    	"enumName": ["poor", "common","uncommon", "rare","epic","legendary","artifact"],        		    	
+        		    },
+        		    "tooltipParams":{
+        		        "description":"Detailed description of item properties",
+        		        "type":"object",
+        		        "properties":
+        		        {
+        		        	"gem0":{
+        		        		"description":"Id of first socked gem",
+        		        		"type": "integer",
+        		        	},
+        		        	"gem1":{
+        		        		"description":"Id of second socked gem",
+        		        		"type": "integer",
+        		        	},
+        		        	"gem2":{
+        		        	    "description":"Id of third socked gem",
+        		        	    "type": "integer",        		        		
+        		        	},
+        		        	"gem3":{
+        		        	    "description":"Id of forth socked gem",
+        		        	    "type": "integer",	
+        		        	},
+        		        	"extraSocket":{
+        		        		"description": "Has an extra socket. Like a belt buckle",
+        		        		"type": "boolean",
+        		        	},
+        		        	"enchant":{
+        		        	    "description": "Spell id of enchantment",
+        		        	    "type": "integer",
+        		        	},
+        		        	"reforge":{
+        		        		"description": "Reforge id",
+        		        		"type": "integer",
+        		        	},
+        		        	"set":{
+        		        	    "description":"Items in the set this item belongs to",
+        		        		"type": "array",
+        		        		"items": { "type":"integer"},
+        		        	},
+        		        	"tinker":{
+        		        		"description":"Tinkered spell id by an engineer",
+        		        		"type": "integer",
+        		        	}
+        		        },
+                    }, /* tooltipParams */
+        		}, 
+        	},
+        }, /* rewardItems */
+        "title":{
+            "description": "Title of achievement",
+            "type": "string",
+        },
+    },
+}
