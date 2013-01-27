@@ -1,6 +1,6 @@
 {
     "id": "http://us.battle.net/api/wow/achievement",
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schema": "http://json-schema.org/draft-04/schema",
     "title": "Achievement",
     "type": "object",
     "required": ["accountWide", "criteria", "description", "icon", "id", "points", "reward", "rewardItems","title"],

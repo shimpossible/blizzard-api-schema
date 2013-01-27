@@ -1,0 +1,46 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://us.battle.net/api/wow/battlePet/ability",
+	"properties":{
+		"cooldown": {
+			"type":"integer",
+			"description": "Cooldown in rounds"
+		},
+		"icon": {
+			"type":"string",
+		},
+		"id": {
+			"type":"integer",
+		},
+		"isPassive": {
+			"type":"boolean",
+		},
+		"name": {
+			"type":"string",
+		},
+		"order": {
+			"type": "integer",	
+		},
+		"petTypeId": {
+			"type":"integer",
+		},
+		"requiredLevel": {
+			"type":"number",
+			"id": "requiredLevel",
+			"required":false,
+		},
+		"rounds": {
+		    "description": "Number of rounds the spell lasts",
+			"type":"intger",
+		},
+		"showHints": {
+			"type":"boolean",
+		}
+		"slot": {
+			"type":"number",
+			"id": "slot",
+			"required":false,
+		},
+	}
+}

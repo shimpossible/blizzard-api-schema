@@ -1,0 +1,28 @@
+{
+    "id": "http://us.battle.net/api/wow/auction/data",
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"required": ["files"],
+	"properties":{
+		"files": {
+			"type":"array",
+			"id": "files",
+			"items":
+				{
+					"type":"object",
+					"required": ["lastModified","url"],
+					"properties":{
+						"lastModified": {
+						    "description": "Miliseconds from 1970 Jan 1"
+							"type":"number",
+						},
+						"url": {
+							"type":"string",
+						}
+					}
+				}
+			
+
+		}
+	}
+}

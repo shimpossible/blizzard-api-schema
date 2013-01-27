@@ -1,0 +1,33 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "http://us.battle.net/api/wow/battlePet/species",
+	"required":false,
+	"properties":{
+		"abilities": {
+			"type":"array",
+			"items":{"$ref": "http://us.battle.net/api/wow/battlePet/ability"},
+		},
+		"canBattle": {
+			"type":"boolean",
+		},
+		"creatureId": {
+			"type":"integer",
+		},
+		"description": {
+			"type":"string",
+		},
+		"icon": {
+			"type":"string",
+		},
+		"petTypeId": {
+			"type":"integer",
+		},
+		"source": {
+			"type":"string",
+		},
+		"speciesId": {
+			"type":"integer",
+		}
+	}
+}
