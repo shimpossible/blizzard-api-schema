@@ -1,0 +1,34 @@
+{
+    "type":"object",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "#",
+    "properties":{
+        "achievementPoints":   {"type":"integer",},
+        "battlegroup":         {"type":"string",},
+        "calcClass":           {"type":"string",},
+        "class":               {"type":"integer",},
+        "gender":              {"type":"integer",},
+        "lastModified":        {"type":"number",},
+        "level":               {"type":"integer",},
+        "name":                {"type":"string",},
+        "race":                {"type":"integer",},
+        "realm":               {"type":"string",},
+        "thumbnail":           {"type":"string",},
+
+        /* achievements */
+        "achievementPoints":   {"type":"integer",},
+        "achievements":{
+            "type":"object",
+            "properties":{
+                "achievementsCompleted": {"type":"array", "items":{"type":"integer"}},
+                "achievementsCompletedTimestamp": {"type":"array", "items":{"type":"number"}},
+                "criteria": {"type":"array", "items":{"type":"integer"}},
+                "criteriaCreated": {"type":"array", "items":{"type":"number"}},
+                "criteriaQuantity": {"type":"array", "items":{"type":"integer"}},
+                "criteriaTimestamp": {"type":"array", "items":{"type":"number"}},
+            }
+        },
+
+        /* apperaance */
+    },
+}

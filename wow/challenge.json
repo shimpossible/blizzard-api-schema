@@ -1,0 +1,70 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "#",
+  "properties":{
+    "challenge": {
+      "type":"array",
+      "id": "challenge",
+      "items":{
+        "type": "object",
+        "properties":{
+          "groups": {
+            "type": "array",
+            "items":{
+              "type": "object",
+              "properties":{
+                "date":{
+                  "format": "date-time",
+                  "type": "string",
+                },
+                "faction":{
+                  "enum": ["alliance","horde"],
+                },
+                "isRecurring":{
+                  "type": "boolean",
+                },
+                "medal":{
+                  "enum": ["GOLD", "SILVER","CONSOLATION"],
+                },
+                "members": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties":{
+                      "character": {"$ref", "http://us.battle.net/api/wow/schema/character#"},
+                      "spec": {"$ref", "http://us.battle.net/api/wow/schema/character#/spec"},
+                    },
+                  },
+                "ranking": { "type": "integer"},
+                "time": {
+                  "id": "time",
+                  "type": "object",
+                  "properties":{
+                    "hours":        {"type": "integer"},
+                    "milliseconds": {"type": "integer"},
+                    "minutes":      {"type": "integer"},
+                    "seconds":      {"type": "integer"},
+                    "time":         {"type": "integer"},
+                  },
+                },
+              }, /* properties */
+            }, /* items */
+          }, /* groups */
+          "map": {
+            "type": "object",
+            "properties": {
+              "bronzeCriteria":   {"$ref", "#time"},
+              "goldCriteria":     {"$ref", "#time"},
+              "hasChallengeMode": {"type": "boolean"},
+              "id":               {"type": "integer"},
+              "name":             {"type": "string"},
+              "silverCriteria":   {"$ref", "#time"},
+              "slug":             {"type": "string"},
+            }, /* properties */
+          }, /* map */
+        }, /* properties */
+      }, /* items */
+    }, /* challenge */
+  }, /* properties */
+}

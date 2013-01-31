@@ -1,0 +1,16 @@
+{
+    "type":"object",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "#",
+    "required":false,
+    "properties":{
+        "breedId":      {"type":"integer",},
+        "health":       {"type":"integer",},
+        "level":        {"type":"integer",},
+        "icon":         {"type":"integer",},
+        "petQualityId": {"type":"integer",},
+        "power":        {"type":"integer",},
+        "speciesId":    {"type":"integer",},
+        "speed":        {"type":"integer",},
+    }
+}
